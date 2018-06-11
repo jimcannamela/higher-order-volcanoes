@@ -4,7 +4,7 @@
 
 * Use higher-order functions to manipulate data about historical volcanic eruptions
 
-## Instruction
+## Instructions
 
 Write your code in `volcano.js`.
 Use `node volcano.js` to run.
