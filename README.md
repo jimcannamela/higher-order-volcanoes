@@ -32,18 +32,20 @@ Use `node volcano.js` to run.
 Use `filter`, `map`, `reduce` and any other higher-order functions to analyze the data in the following ways:
 
 1. Return the volcanoes that erupted in the 1980s.
-1. Return an array of the names of volcanoes that have a Volcanic Explosivity Index (VEI) of 6 or higher.
-1. Return the volcano with the highest number of recorded deaths.
-1. Return the percentage of volcanoes that caused tsunamis.
+1. Return an array of the names of volcanoes that had an eruption with a Volcanic Explosivity Index (VEI) of 6 or higher.
+1. Return the eruption with the highest number of recorded deaths.
+1. Return the percentage of eruptions that caused tsunamis.
 1. Return the most common type of volcano in the set.
 1. Return the number of eruptions when supplied a country as an argument.
-1. Return the average elevation of all volcanoes.
+1. Return the average elevation of all eruptions.
 1. Return an array of types of volcanoes.
 1. Return the percentage of eruptions that occurred in the Northern Hemisphere.
 1. Return the names of eruptions that occurred after 1800, that did NOT cause a tsunami, happened in the Southern Hemisphere, and had a VEI of 5.
 1. Return the names of eruptions that occurred at or above an elevation passed in as an argument.
-1. Return the agents of death for the most deadly volcanoes.
+1. Return the agents of death for the ten most deadly eruptions.
 
+Key for Agents of Death:
+![Key for Agents of Death](./agents.png)
 
 ### References
 
