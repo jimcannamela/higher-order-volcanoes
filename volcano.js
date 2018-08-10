@@ -137,6 +137,13 @@ class VolcanoAnalyzer {
         }
         return elevatedVolcanoes;
     }
+    topAgentsOfDeath(){
+        const sorted = volcanoes.sort((a, b) => a.DEATHS < b.DEATHS ? 1 : -1)
+        const top10 = sorted.slice(0,10)
+        const top10CausesOfDeathNotNormalized = top10.map(volcano => volcano.Agent).filter(ele=>ele).join(',').split(',')
+        const top10CausesOfDeathNormalized = [...new Set(top10CausesOfDeathNotNormalized)]
+        return top10CausesOfDeathNormalized
+    }
 }
 
 
@@ -156,4 +163,5 @@ const volcanoAnalyzer = new VolcanoAnalyzer();
 // console.log(volcanoAnalyzer.percentNorth());
 // console.log(volcanoAnalyzer.manyFilters());
 
-console.log(volcanoAnalyzer.elevatedVolcanoesNoHOF(4990));
+// console.log(volcanoAnalyzer.elevatedVolcanoesNoHOF(4990));
+console.log(volcanoAnalyzer.topAgentsOfDeath())
