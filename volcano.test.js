@@ -4,7 +4,10 @@ const VolcanoAnalyzer = require('./volcano');
 const log = jest.spyOn(console, 'log').mockImplementation(() => {});
 
 // ? allows instructors to return or console.log while live-coding
-const captureResult = (func, ...args) => (log.mock.calls[0] ? log.mock.calls[0][0] : func(...args));
+const captureResult = (func, ...args) => {
+  const result = func(...args); 
+  return log.mock.calls[0] ? log.mock.calls[0][0] : result
+};
 
 const VA = new VolcanoAnalyzer();
 

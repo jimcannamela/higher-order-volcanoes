@@ -67,5 +67,4 @@ class VolcanoAnalyzer {
     console.log(result);
   }
 }
-
 module.exports = VolcanoAnalyzer;
