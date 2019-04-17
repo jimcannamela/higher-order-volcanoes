@@ -1,0 +1,22 @@
+{
+  "name": "hof-with-volcanoes",
+  "version": "0.0.1",
+  "description": "## Objectives",
+  "main": "volcano.js",
+  "scripts": {
+    "test": "jest . --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tbhesswebber/hof-with-volcanoes.git"
+  },
+  "author": "Tanner B. Hess Webber <tb@hesswebber.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tbhesswebber/hof-with-volcanoes/issues"
+  },
+  "homepage": "https://github.com/Tbhesswebber/hof-with-volcanoes#readme",
+  "devDependencies": {
+    "jest": "~24.7.1"
+  }
+}
