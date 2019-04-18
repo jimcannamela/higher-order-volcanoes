@@ -1495,7 +1495,15 @@ Array [
 ]
 `;
 
-exports[`VolcanoAnalyzer should normalize and list the top 10 causes of death 1`] = `Array []`;
+exports[`VolcanoAnalyzer should normalize and list the top 10 causes of death 1`] = `
+Array [
+  "P",
+  "M",
+  "W",
+  "A",
+  "I",
+]
+`;
 
 exports[`VolcanoAnalyzer should print/return the most deadly volcano 1`] = `
 Object {

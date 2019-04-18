@@ -66,6 +66,12 @@ class VolcanoAnalyzer {
     let result;
     console.log(result);
   }
+
+  topAgentsOfDeath(elevation) {
+    // TODO: return the unique agents of death in the top ten deadliest eruptions
+    let result;
+    console.log(result);
+  }
 }
 
 module.exports = VolcanoAnalyzer;

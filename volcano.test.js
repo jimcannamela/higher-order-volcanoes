@@ -65,7 +65,7 @@ describe('VolcanoAnalyzer', () => {
     expect(captureResult(VA.elevatedVolcanoes, 10000)).toMatchSnapshot('10000');
   });
 
-  it('should normalize and list the top 10 causes of death', () => {
-    expect(captureResult(VA.elevatedVolcanoes)).toMatchSnapshot();
+  it('should normalize and list the causes of death in the top 10 deadliest eruptions', () => {
+    expect(captureResult(VA.topAgentsOfDeath)).toMatchSnapshot();
   });
 });
