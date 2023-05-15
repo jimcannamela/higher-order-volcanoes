@@ -1,25 +1,42 @@
 const volcanoes = require('./volcano.json');
 
-// const eruptedInEighties = () => {
-//   // TODO: return the volcanoes that erupted in the 1980s.
-//   // filter volcanoes Year >= 1980
-//   // filter volcanoes Year < 1990
-//   let result = volcanoes.filter(v => v.Year >= 1980)
-//                         .filter(v => v.Year < 1990);
+const eruptedInEighties = () => {
+  // TODO: return the volcanoes that erupted in the 1980s.
 
-//   console.log(result);
-// }
+  let result = volcanoes.filter(v => v.Year >= 1980)
+                        .filter(v => v.Year < 1990);
+  
+  console.log(result.map(v => v.Year));
 
-// console.log('-- Erupted in the Eighties --');
+  console.log(result.length);
+  
+  return result;
+}
 
-// eruptedInEighties();
+console.log('-- Erupted in the Eighties --');
 
-// const highVEI = () => {
+eruptedInEighties();  // a Total of 40 was returned
+
+// const highVEI = () => {     // <---- HOW DO I RETURN A UNIQUE LIST WITH A COUNT FOR EACH UNIQUE VALUE
 //   // TODO: return an array of the names of volcanoes that have a VEI of 6 or higher.
-//   // filter
-//   let result = volcanoes.filter(v => v.VEI >= 6 )
-//                         .map(v => v.Name);
-//   console.log(result);
+
+// // // This works, trying to pare it down to a unique list.
+// //   let result = volcanoes.filter(v => v.VEI >= 6 )
+// //                         .map(v => v.Name);
+// //
+
+// // This returns a unique list of the Volcanoes
+//   let result = [];
+
+//   myArray = volcanoes.filter(v => v.VEI >= 6 )
+//                      .map(v => v.Name)
+//                      .forEach(i => {
+//                        if (!result.includes(i)) 
+//                             result.push(i)
+//                         })
+//   ;
+
+//   console.log(result.sort());
 // }
 
 // console.log('--- VEI greater than or equal to 6 ---');
@@ -29,7 +46,8 @@ const volcanoes = require('./volcano.json');
 // const mostDeadly = () => {
 //   // TODO: return the volcano with the highest recorded deaths.
 //   // Find?
-//   let result = volcanoes.filter(v => v.DEATHS > '').sort(v => v.DEATHS).shift();
+//   let myArray = volcanoes.filter(v => v.DEATHS > '').sort((a, b) => a.DEATHS - b.DEATHS);
+//   let result = myArray[myArray.length-1];
 //   console.log(result);
 // }
 
@@ -43,17 +61,31 @@ const volcanoes = require('./volcano.json');
 // }
 
 // causedTsunami();
-// const mostCommonType = () => { <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOT DONE YET
+
+// const mostCommonType = () => { 
 //   // TODO: return the most common type of volcano in the list
 
-//   let result = volcanoes.sort(v => v.Type)
-//                         .forEach( t in v) {
-//                           if ()
-//                         }
+//   let typeArray = [];
+//   let myObj = {};
+//   let myArray = volcanoes.map(v => v.Type)
+//                          .sort(v => v.Type)
+//                          .forEach( t => { 
+//                             if (!typeArray.includes(t)) {
+//                               myObj.Type=t;
+//                               myObj.Count=1;
+//                               typeArray.push(myObj);
+//                             } else {
+//                               typeArray.findIndex((x) => x === t ).Count++                                       
+//                             }
+//                          });
+
+//   let result=typeArray;
 //   console.log(result);
 // }
 
 // mostCommonType();
+
+
 // const eruptionsByCountry = (country) => {
 //   // TODO: return the number of eruptions when supplied a country as an argument
 //   let result = volcanoes.filter(v => v.Country === country).length;
@@ -108,12 +140,12 @@ const volcanoes = require('./volcano.json');
 
 // elevatedVolcanoes(5000);
 
-const topAgentsOfDeath = (elevation) => {
-  // TODO: return the unique agents of death in the top ten deadliest eruptions
-  let result = volcanoes.filter(v => v.DEATHS > '')
-                        .sort(v => v.DEATHS)
-                        .slice(0,10)
-  console.log(result);
-}
+// const topAgentsOfDeath = (elevation) => {   <<<< SORT IS NOT WORKING
+//   // TODO: return the unique agents of death in the top ten deadliest eruptions
+//   let result = volcanoes.filter(v => v.DEATHS > '')
+//                         .sort(v => v.DEATHS)
+//                         .slice(0,10)
+//   console.log(result);
+// }
 
-topAgentsOfDeath();
+// topAgentsOfDeath();
